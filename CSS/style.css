@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Sanchez&family=Work+Sans:wght@400;500;600&display=swap");
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%; /* 1rem equals to 10px */
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+/* My Variables */
+:root {
+  --main-color: #e6561c;
+  --primary-color: #2d0d01;
+  --primary-shade: #2d0d01;
+  --helper-color: #03cece;
+  --para-color: #ee8e68;
+  --background-color: #fcece6;
+  --btn-background: #e6561c;
+  --btn-hover-bg: #9f2f02;
+  --box-shadow: #cdcdcd;
+  --white: #fff;
+}
+
+h1,
+h2 {
+  font-size: 6.5rem;
+  color: var(--primary-color);
+  font-family: "Sanchez", serif;
+}
+h2 {
+  font-size: 4.5rem;
+}
+h3,
+h4 {
+  font-size: 2.5rem;
+  font-family: "Mulish", sans-serif;
+  color: var(--primary-color);
+}
+h4 {
+  font-size: 2.2rem;
+}
+.navbar-link {
+  padding: 1rem 3rem;
+}
+p,
+li,
+a {
+  font-family: "Mulish", sans-serif;
+  cursor: pointer;
+  border-radius: 1.8rem;
+}
+p {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  color: var(--para-color);
+  font-style: normal;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+li {
+  list-style-type: none;
+}
+
+.common-btn {
+  /* width: 12rem; */
+  height: 4.5rem;
+  margin-right: 1.2rem;
+  border-radius: 2rem;
+  padding: 0 3.4rem;
+  border: none;
+  font-family: "Mulish", sans-serif;
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+/* Our Main Menu Styling*/
+.header {
+  display: flex;
+  align-items: center;
+  height: 9rem;
+  width: 100%;
+  padding: 0 7rem;
+  /* background-color: var(---background-color); */
+}
+.logo {
+  display: inline-block;
+}
+.mylogo {
+  width: 10rem;
+}
+.navbar .navlist {
+  gap: 2rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.navbar .navlist li {
+  display: flex;
+  align-items: center;
+}
+
+.navlist li a {
+  color: var(--main-color);
+  position: relative;
+}
+.navlist li a::before {
+  content: "";
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  bottom: -0.4rem;
+  left: 0;
+  width: 0%;
+  height: 0.2rem;
+  background-color: var(--main-color);
+}
+.navlist li a:hover::before {
+  width: 100%;
+}
+#nav-btn-1 {
+  background-color: var(--white);
+}
+#nav-btn-1:hover,
+#nav-btn-2:hover {
+  transform: translateY(-0.5rem);
+}
+#nav-btn-2 {
+  background-color: var(--helper-color);
+}
+#nav-btn-2:hover {
+  background-color: #04b9b9;
+}
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 0 2rem; */
+  padding-left: 0 2rem;
+  padding: 0 0 0 20rem;
+  padding-left: 0 5rem;
+  width: 100%;
+}
+
+/* Hamburger and close Icon */
+.menu-bar {
+  display: none;
+}
+.menu-bar .navbar-icons[name="nav-close"] {
+  display: none;
+}
+
+/* Reusable Codes */
+.common-section {
+  max-width: 150rem;
+  height: 100%;
+  margin: auto;
+  border-radius: 4rem;
+  padding: 8rem 7rem;
+}
+.common-btn:hover {
+  transform: translateY(-0.5rem);
+}
+.main-btn:nth-child(1) {
+  background-color: var(--background-color);
+}
+.main-btn:nth-child(1):hover {
+  background-color: #e9dbd5;
+}
+.main-btn:nth-child(2) {
+  background-color: var(--btn-background);
+  color: var(--white);
+}
+/* Hero Section Styling Starts Here */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.hero-section .hero-left-section {
+  width: 40%;
+}
+.hero-section .hero-right-section {
+  /* width: 55%; */
+}
+.hero-section .hero-left-section p {
+  padding: 3rem 0;
+}
+.hero-section h1 {
+  font-size: 6.5rem;
+}
+.app-btn {
+  width: 18rem;
+  padding-left: 0;
+  cursor: pointer;
+}
+.hero-right-section .hero-img {
+  position: relative;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--background-color);
+  width: 50%;
+  height: 65rem;
+  border-top-left-radius: 8rem;
+  border-bottom-left-radius: 8rem;
+  z-index: -1;
+}
+
+/* App Section Styling Starts Here */
+.app-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.app-section-img {
+  width: 40rem;
+  border-radius: 5rem;
+  padding-top: 2rem;
+}
+.app-section-right {
+  width: 40%;
+  margin: auto;
+}
+
+.app-section .app-section-right p {
+  padding: 3rem 1.5rem;
+}
+.app-section-left {
+  position: relative;
+}
+.app-section-left::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 110%;
+  top: -2rem;
+  left: -5rem;
+  background-color: var(--background-color);
+  z-index: -1;
+  border-radius: 5rem;
+}
+
+/* Tools Section Styling Starts Here */
+.tools-section {
+  background-color: var(--background-color);
+}
+.tools-section .tools-heading h2 {
+  text-align: center;
+}
+.tools-section .tools-heading p {
+  text-align: center;
+  padding: 2.5rem 0;
+}
+.tool-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding: 2rem 0;
+}
+.tool-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 40rem;
+  height: 45rem;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 2rem;
+  transition: 0.4s ease-in-out;
+  box-shadow: 2px 2px 5px var(--box-shadow), -2px -2px 5px var(--box-shadow);
+}
+.tool-images {
+  width: 20rem;
+  margin: auto;
+  transition: 0.5s ease-in-out;
+}
+
+.tool-box h3 {
+  text-align: center;
+}
+.tool-box p {
+  padding: 4rem 1.5rem;
+}
+.tool-box:hover .tool-images {
+  transform: rotate(360deg);
+}
+.tool-box:hover {
+  background-color: var(--white);
+  box-shadow: 0px 0px 2.5rem rgba(119, 119, 119, 0.651);
+}
+
+/* Journey Section */
+.journey-section-left::before {
+  content: none;
+}
+.journey-section-img {
+  width: 60rem;
+  height: 45rem;
+}
+
+/* Fitness -goal section */
+#fitness-goal-section {
+  flex-direction: row-reverse;
+}
+#goal-tips-content h2 {
+  padding-bottom: 5.5rem;
+}
+#goal-section-left::before {
+  content: none;
+}
+#goal-section-right h2 {
+  padding-bottom: 4rem;
+}
+.goal-img {
+  width: 45rem;
+}
+#goal-tips-content p {
+  padding: 1.5rem 0 4rem 0;
+}
+
+/* Footer Section Styling Starts Here */
+.footer-section {
+  background-color: var(--background-color);
+  padding: 3rem 7rem;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-left {
+  width: 20%;
+}
+.footer-right {
+  width: 80%;
+}
+.footer-left {
+  /* width: 20%; */
+  display: flex;
+  justify-content: center;
+}
+.footer-left img{
+  width: 10rem;
+  height: 10rem;
+}
+.footer-right-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4rem;
+}
+.footer-link h4 {
+  text-align: center;
+}
+.footer-link li a {
+  display: flex;
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--main-color);
+  padding-top: 1.4rem;
+  flex-direction: column;
+  transition: all 0.2s linear;
+}
+.footer-link li a:hover {
+  text-decoration: underline;
+  color: #bd3d0b;
+}
+.hr {
+  margin-top: 3rem;
+  height: 0.2rem;
+  background: var(--main-color);
+  border: none;
+  border-radius: 2rem;
+}
+.copyright-data {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 4.5rem;
+}
+
+/* Icon - bar styling */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999999;
+}
+.icon-bar a {
+  width: 17.8rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.7rem;
+  padding: 0.7rem;
+  background-color: var(--background-color);
+  border-radius: 0px;
+  color: var(--white);
+  transform: translateX(-14.2rem);
+  transition: all 0.4s ease-in-out;
+}
+.icon-bar a:hover {
+  transform: translateX(0);
+}
+.icon-bar a .fab {
+  padding-left: 0.5rem;
+  font-size: 3rem;
+}
+
+/* Color Change */
+.icon-bar .facebook {
+  background: #00aced;
+}
+.icon-bar .instagram {
+  background: #e4405f;
+}
+.icon-bar .youtube {
+  background: #cd201f;
+}
+.icon-bar .telegram {
+  background: #0077b5;
+}

@@ -1,0 +1,254 @@
+/* Desktop First Approach */
+
+@media (max-width: 1270px) {
+  html {
+    font-size: 55.25%; /* 1rem equals to 9px */
+  }
+  .tool-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 2rem 0;
+  }
+  .hero-image {
+    width: 55rem;
+  }
+  .journey-section-img {
+    width: 55rem;
+    height: 42rem;
+  }
+  .common-section {
+    max-width: 150rem;
+    height: 100%;
+    margin: auto;
+    border-radius: 4rem;
+    padding: 5rem 7rem;
+  }
+  .hero-section .hero-left-section {
+    width: 50%;
+  }
+  .header::before {
+    height: 55rem;
+  }
+  .header .navbar {
+    padding: 0 0 0 15rem;
+  }
+  .app-section-img {
+    width: 35rem;
+  }
+}
+
+/* Small Laptop and Tablet Responsive Code */
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 50%; /* 1rem equals to 8px */
+  }
+  .header .navbar {
+    display: none;
+  }
+  .btn-group .app-btn {
+    width: 15rem;
+  }
+  .menu-bar {
+    display: block;
+  }
+  .header {
+    justify-content: space-between;
+  }
+  .menu-bar .navbar-icons[name="menu"] {
+    display: block;
+  }
+  .menu-bar .navbar-icons[name="close"] {
+    display: none;
+  }
+  .menu-bar .navbar-icons {
+    font-size: 4rem;
+  }
+  .header {
+    position: relative;
+  }
+  .header .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    height: 75vh;
+    transform: translateX(100%);
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: all 0.4s ease-in-out;
+  }
+  .navbar .navlist li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.7rem;
+  }
+  .right-nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .active .navbar {
+    z-index: 9999999;
+    transform: translateX(0%);
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    padding: 0;
+  }
+  .menu-bar {
+    z-index: 99999999;
+    cursor: pointer;
+  }
+  .active .menu-bar .navbar-icons[name="close"] {
+    display: block;
+  }
+  .active .menu-bar .navbar-icons[name="menu"] {
+    display: none;
+  }
+}
+@media (max-width: 844px) {
+  .common-section {
+    padding: 8rem 3rem;
+  }
+  .header::before {
+    height: 65rem;
+  }
+  .app-section-img {
+    width: 32rem;
+  }
+  #fitness-goal-section {
+    flex-direction: column;
+  }
+  .app-section-right {
+    width: 45%;
+  }
+  .goal-img {
+    width: 40rem;
+  }
+  #goal-section-right {
+    width: 85%;
+  }
+  #goal-section-right h2 {
+    padding-bottom: 4rem;
+  }
+  .app-section .app-section-right p {
+    padding: 2rem 0;
+  }
+  .footer-right-content {
+    padding: 0;
+  }
+
+  .copyright-data {
+    flex-direction: column;
+    align-items: center;
+  }
+  .copyright-data .copyright-left {
+    padding-top: 1.2rem;
+  }
+  .app-section .app-section-right p {
+    padding: 3rem 0;
+  }
+  .journey-section-img {
+    width: 36rem;
+    height: 30rem;
+  }
+  .btn-group .app-btn {
+    width: 15rem;
+  }
+  .main-btn {
+    margin: 1.2rem 0;
+  }
+  .hero-image {
+    max-width: 45rem;
+  }
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-left img{
+    width: 10rem;
+    height: 12rem;
+  }
+  .footer-left .mylogo {
+    padding-bottom: 3rem;
+  }
+}
+@media (max-width: 600px) {
+  .hero-image {
+    max-width: 55rem;
+  }
+
+  .hero-section {
+    flex-direction: column-reverse;
+  }
+  .hero-section .hero-left-section {
+    width: 90%;
+    text-align: center;
+  }
+  .app-section {
+    flex-direction: column;
+  }
+  .app-section-right {
+    width: 90%;
+    text-align: center;
+    padding-top: 5rem;
+  }
+  .common-btn-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-right-content {
+    flex-direction: column;
+  }
+  .footer-link {
+    margin: 3rem 0;
+  }
+  .header {
+    padding: 0 1.5rem;
+  }
+  .tool-boxes {
+    grid-template-columns: 1fr;
+  }
+  .journey-section-img {
+    width: 47rem;
+    height: 38rem;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 425px) {
+  html {
+    font-size: 46%;
+  }
+  .hero-image {
+    max-width: 40rem;
+  }
+  .footer-link li a {
+    font-size: 1.55rem;
+  }
+  .app-section-img {
+    width: 28rem;
+  }
+  .journey-section-img {
+    width: 41rem;
+    height: 34rem;
+  }
+  .goal-img {
+    width: 36rem;
+  }
+  .copyright-right h4 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
